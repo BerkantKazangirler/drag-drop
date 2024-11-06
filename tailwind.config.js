@@ -17,8 +17,8 @@ export default {
         "element-text": '#5030E5',
         "todo-blue": '#5030E5',
         "low-tag": "#D58D49",
-        "high-tag": "#D8727D",
-        "completed-tag": "#8BC48A",
+        "red-tag": "#D8727D",
+        "green-tag": "#8BC48A",
       }
     },
   },

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "user_001",
+    "name": "Ali",
+    "surname": "Yılmaz",
+    "email": "ali.yilmaz@example.com",
+    "role": "Admin"
+  },
+  {
+    "id": "user_002",
+    "name": "Ayşe",
+    "surname": "Kara",
+    "email": "ayse.kara@example.com",
+    "role": "Project Manager"
+  },
+  {
+    "id": "user_003",
+    "name": "Mehmet",
+    "surname": "Şahin",
+    "email": "mehmet.sahin@example.com",
+    "role": "Developer"
+  },
+  {
+    "id": "user_004",
+    "name": "Zeynep",
+    "surname": "Demir",
+    "email": "zeynep.demir@example.com",
+    "role": "QA Engineer"
+  }
+]

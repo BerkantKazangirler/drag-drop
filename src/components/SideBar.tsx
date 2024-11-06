@@ -9,9 +9,23 @@ import { CiSquarePlus } from "react-icons/ci";
 import { FaCircle } from "react-icons/fa";
 import { SlOptions } from "react-icons/sl";
 import { MdLightbulb } from "react-icons/md";
-export const SideBar = () => {
+import classNames from "classnames";
+
+interface props {
+  collapse: boolean;
+}
+
+export const SideBar = ({ collapse }: props) => {
   return (
-    <div className="flex flex-col min-w-72 h-screen border-r-2 gap-10 border-border-color">
+    <div
+      className={classNames(
+        "flex flex-col min-w-72 border-r-2 gap-10 border-border-color",
+        {
+          "min-w-72": collapse,
+          "min-w-40": !collapse,
+        }
+      )}
+    >
       <div className="flex flex-col px-5 gap-10 mt-8">
         <div className="flex flex-row gap-4">
           <IoHomeOutline className="text-black/60 text-2xl" />

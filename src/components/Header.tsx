@@ -2,15 +2,23 @@ import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
 import { CiSearch, CiCalendar, CiSquareQuestion } from "react-icons/ci";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { GoChevronDown } from "react-icons/go";
+import { useState } from "react";
 
 export const Header = () => {
+  const [collapse, setCollapse] = useState(false);
+
   return (
     <div className="flex justify-between h-[88px] border-b-2 border-border-color">
       <div className="flex flex-row gap-20">
         <div className="flex flex-row w-72 items-center justify-between border-r-2 px-3 border-border-color">
           <div className="flex flex-row items-center gap-1">
             <img src={"./public/assets/logo.png"} className="h-14" />
-            <span className="font-medium text-xl">Project M.</span>
+            <span
+              className="font-medium text-xl"
+              onClick={() => setCollapse(true)}
+            >
+              Project M.
+            </span>
           </div>
           <MdKeyboardDoubleArrowLeft className="text-2xl mr-4 text-black/60" />
         </div>

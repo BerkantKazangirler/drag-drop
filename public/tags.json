@@ -1,0 +1,6 @@
+[
+  { "id": "tag_001", "name": "UI" },
+  { "id": "tag_002", "name": "Design" },
+  { "id": "tag_003", "name": "Backend" },
+  { "id": "tag_004", "name": "Integration" }
+]

@@ -1,19 +1,9 @@
-import { Detail } from "./components/Detail";
-import { Header } from "./components/Header";
-import { SideBar } from "./components/SideBar";
+import { Layout } from "./components/Layout";
 
 function App() {
   return (
     <>
-      <div className="flex flex-col">
-        <header>
-          <Header />
-        </header>
-        <div className="flex flex-row w-full">
-          <SideBar />
-          <Detail />
-        </div>
-      </div>
+      <Layout />
     </>
   );
 }
