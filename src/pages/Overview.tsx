@@ -6,6 +6,7 @@ import { HiOutlineViewGrid } from "react-icons/hi";
 import { GoPencil, GoChevronDown } from "react-icons/go";
 import SectionContainer from "../components/Section/Container";
 import { Menu, MenuButton, MenuItems } from "@headlessui/react";
+import { Calendar } from "../components/Calendar";
 
 const Overview = () => {
   return (
@@ -25,20 +26,32 @@ const Overview = () => {
         <Menu>
           <div className="flex flex-row w-full gap-4">
             <MenuButton>
-              <button className="border flex flex-row text-lg border-black/50 font-medium px-4 gap-2 rounded-t-lg py-1 text-black/50">
+              <button className="border flex flex-row text-lg w-32 border-black/50 font-medium px-4 gap-2 rounded-t-lg py-1 text-black/50">
                 <CiFilter className="text-2xl" /> Filter
                 <GoChevronDown className="text-xl my-auto" />
               </button>
             </MenuButton>
-            <MenuItems className="absolute mt-9">
+            <MenuItems className="absolute mt-9 w-32 z-10">
               <div className="flex flex-col border-black/50 border">
-                <button>Tarihe Göre</button>
+                <button className="px-4 py-2 border-b">Tarihe Göre</button>
+                <button className="px-4 py-2 text-sm rounded-b-lg">
+                  Alfabetik Sıra
+                </button>
               </div>
             </MenuItems>
-            <button className="border flex flex-row text-lg border-black/50 font-medium px-4 gap-2 rounded-lg py-1 text-black/50">
-              <BsCalendarDate className="text-sm my-auto" /> Today
-              <GoChevronDown className="text-xl my-auto" />
-            </button>
+            <Menu>
+              <MenuButton>
+                <button className="border flex flex-row text-lg border-black/50 font-medium px-4 gap-2 rounded-lg py-1 text-black/50">
+                  <BsCalendarDate className="text-sm my-auto" /> Today
+                  <GoChevronDown className="text-xl my-auto" />
+                </button>
+              </MenuButton>
+              <MenuItems className="absolute w-60 mt-10 ml-5">
+                <div className="bg-slate-500 rounded-xl">
+                  <Calendar />
+                </div>
+              </MenuItems>
+            </Menu>
           </div>
         </Menu>
         <div className="flex flex-row gap-4">
