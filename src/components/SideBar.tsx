@@ -29,23 +29,23 @@ export const SideBar = ({ collapse }: props) => {
       <div className="flex flex-col px-5 gap-10 mt-8">
         <div className="flex flex-row gap-4">
           <IoHomeOutline className="text-black/60 text-2xl" />
-          <span className="text-black/50 text-xl">Home</span>
+          <button className="text-black/50 text-xl">Home</button>
         </div>
         <div className="flex flex-row gap-4">
           <BiMessageDetail className="text-black/60 text-2xl" />
-          <span className="text-black/50 text-xl">Messages</span>
+          <button className="text-black/50 text-xl">Messages</button>
         </div>
         <div className="flex flex-row gap-4">
           <LiaClipboardListSolid className="text-black/60 text-2xl" />
-          <span className="text-black/50 text-xl">Tasks</span>
+          <button className="text-black/50 text-xl">Tasks</button>
         </div>
         <div className="flex flex-row gap-4">
           <IoPeopleOutline className="text-black/60 text-2xl" />
-          <span className="text-black/50 text-xl">Members</span>
+          <button className="text-black/50 text-xl">Members</button>
         </div>
         <div className="flex flex-row gap-4">
           <IoSettingsOutline className="text-black/60 text-2xl" />
-          <span className="text-black/50 text-xl">Settings</span>
+          <button className="text-black/50 text-xl">Settings</button>
         </div>
       </div>
       <span className="border-t self-center border-border-color w-[250px]"></span>
