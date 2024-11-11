@@ -1,9 +1,13 @@
-import { MdKeyboardDoubleArrowLeft } from "react-icons/md";
+import {
+  MdKeyboardDoubleArrowLeft,
+  MdKeyboardDoubleArrowRight,
+} from "react-icons/md";
 import { CiSearch, CiCalendar, CiSquareQuestion } from "react-icons/ci";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { GoChevronDown } from "react-icons/go";
 import { useState } from "react";
 import { Menu, MenuButton, MenuItems } from "@headlessui/react";
+import classNames from "classnames";
 
 export const Header = () => {
   const [collapse, setCollapse] = useState(false);
@@ -11,17 +15,42 @@ export const Header = () => {
   return (
     <div className="flex justify-between h-[88px] border-b-2 border-border-color">
       <div className="flex flex-row gap-20">
-        <div className="flex flex-row w-72 items-center justify-between border-r-2 px-3 border-border-color">
+        <div
+          className={classNames(
+            "flex flex-row items-center justify-between border-r-2 px-3 border-border-color",
+            {
+              "w-72": collapse,
+              "w-28": !collapse,
+            }
+          )}
+        >
           <div className="flex flex-row items-center gap-1">
-            <img src={"./public/assets/logo.png"} className="h-14" />
+            <img
+              src={"./public/assets/logo.png"}
+              className={classNames({
+                "h-14": collapse,
+                "h-10": !collapse,
+              })}
+            />
             <span
               className="font-medium text-xl"
               onClick={() => setCollapse(true)}
             >
-              Project M.
+              {collapse && <p>Project M.</p>}
             </span>
           </div>
-          <MdKeyboardDoubleArrowLeft className="text-2xl mr-4 text-black/60" />
+          {collapse && (
+            <MdKeyboardDoubleArrowLeft
+              className="text-2xl mr-4 text-black/60"
+              onClick={() => setCollapse((t) => !t)}
+            />
+          )}
+          {!collapse && (
+            <MdKeyboardDoubleArrowRight
+              className="text-2xl mr-4 text-black/60"
+              onClick={() => setCollapse((t) => !t)}
+            />
+          )}
         </div>
         <div className="flex flex-row items-center w-[500px] ">
           <CiSearch className="absolute text-2xl text-black/50 ml-2 mr-2" />
