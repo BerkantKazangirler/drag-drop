@@ -11,55 +11,68 @@ import { SlOptions } from "react-icons/sl";
 import { MdLightbulb } from "react-icons/md";
 import classNames from "classnames";
 
-interface props {
-  collapse: boolean;
+interface prop {
+  collapse: any;
 }
 
-export const SideBar = ({ collapse }: props) => {
-  collapse = false;
+export const SideBar = ({ collapse }: prop) => {
   return (
     <div
       className={classNames(
         "flex flex-col border-r-2 gap-10 border-border-color",
         {
-          "min-w-72": collapse,
-          "w-[7.4rem]": !collapse,
+          "min-w-72": !collapse,
+          "w-[7.4rem]": collapse,
         }
       )}
     >
       <div
         className={classNames("flex flex-col px-5 gap-10 mt-8", {
-          "items-center": !collapse,
+          "items-center": collapse,
         })}
       >
         <div className="flex flex-row gap-4">
           <IoHomeOutline className="text-black/60 text-2xl" />
-          {collapse && <button className="text-black/50 text-xl">Home</button>}
+          {!collapse && (
+            <button className="text-black/50 text-xl" type="button">
+              Home
+            </button>
+          )}
         </div>
         <div className="flex flex-row gap-4">
           <BiMessageDetail className="text-black/60 text-2xl" />
-          {collapse && (
-            <button className="text-black/50 text-xl">Messages</button>
+          {!collapse && (
+            <button className="text-black/50 text-xl" type="button">
+              Messages
+            </button>
           )}
         </div>
         <div className="flex flex-row gap-4">
           <LiaClipboardListSolid className="text-black/60 text-2xl" />
-          {collapse && <button className="text-black/50 text-xl">Tasks</button>}
+          {!collapse && (
+            <button className="text-black/50 text-xl" type="button">
+              Tasks
+            </button>
+          )}
         </div>
         <div className="flex flex-row gap-4">
           <IoPeopleOutline className="text-black/60 text-2xl" />
-          {collapse && (
-            <button className="text-black/50 text-xl">Members</button>
+          {!collapse && (
+            <button className="text-black/50 text-xl" type="button">
+              Members
+            </button>
           )}
         </div>
         <div className="flex flex-row gap-4">
           <IoSettingsOutline className="text-black/60 text-2xl" />
-          {collapse && (
-            <button className="text-black/50 text-xl">Settings</button>
+          {!collapse && (
+            <button className="text-black/50 text-xl" type="button">
+              Settings
+            </button>
           )}
         </div>
       </div>
-      {collapse && (
+      {!collapse && (
         <>
           <span className="border-t self-center border-border-color w-[250px]"></span>
           <div className="flex flex-col px-5 gap-2">
@@ -100,7 +113,10 @@ export const SideBar = ({ collapse }: props) => {
                 We don’t have any notice for you, till then you can share your
                 thoughts with your peers.
               </p>
-              <button className="bg-white w-[210px] mx-auto py-3 rounded-md font-medium mt-2">
+              <button
+                className="bg-white w-[210px] mx-auto py-3 rounded-md font-medium mt-2"
+                type="button"
+              >
                 Write a message
               </button>
             </div>

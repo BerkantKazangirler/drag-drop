@@ -10,7 +10,7 @@ export default function ModalContent({ onClose, data }: props) {
   return (
     <div className="flex modal z-20 bg-slate-500 w-96 h-auto items-start rounded-xl absolute top-[40%] shadow-2xl right-[45%]">
       <div className="flex flex-col p-4 gap-2">
-        <button className="absolute right-2" onClick={onClose}>
+        <button className="absolute right-2" onClick={onClose} type="button">
           <TfiClose />
         </button>
         <span className="text-white text-lg text-center">{data.title}</span>

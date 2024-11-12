@@ -5,13 +5,14 @@ import {
 import { CiSearch, CiCalendar, CiSquareQuestion } from "react-icons/ci";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { GoChevronDown } from "react-icons/go";
-import { useState } from "react";
 import { Menu, MenuButton, MenuItems } from "@headlessui/react";
 import classNames from "classnames";
 
-export const Header = () => {
-  const [collapse, setCollapse] = useState(false);
+interface prop {
+  collapse: any;
+}
 
+export default function Header({ collapse }: prop) {
   return (
     <div className="flex justify-between h-[88px] border-b-2 border-border-color">
       <div className="flex flex-row gap-20">
@@ -28,27 +29,26 @@ export const Header = () => {
             <img
               src={"./public/assets/logo.png"}
               className={classNames({
-                "h-14": collapse,
-                "h-10": !collapse,
+                "h-14": !collapse,
+                "h-10": collapse,
               })}
             />
-            <span
-              className="font-medium text-xl"
-              onClick={() => setCollapse(true)}
-            >
-              {collapse && <p>Project M.</p>}
-            </span>
+            {collapse && (
+              <span className="font-medium text-xl">
+                <p>Project M.</p>
+              </span>
+            )}
           </div>
-          {collapse && (
+          {!collapse && (
             <MdKeyboardDoubleArrowLeft
-              className="text-2xl mr-4 text-black/60"
-              onClick={() => setCollapse((t) => !t)}
+              className="text-2xl mr-4 text-black/60 hover:cursor-pointer"
+              onClick={collapse}
             />
           )}
-          {!collapse && (
+          {collapse && (
             <MdKeyboardDoubleArrowRight
-              className="text-2xl mr-4 text-black/60"
-              onClick={() => setCollapse((t) => !t)}
+              className="text-2xl mr-4 text-black/60 hover:cursor-pointer"
+              onClick={collapse}
             />
           )}
         </div>
@@ -91,4 +91,4 @@ export const Header = () => {
       </div>
     </div>
   );
-};
+}
