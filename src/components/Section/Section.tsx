@@ -1,4 +1,4 @@
-import { HeaderTypesI, MissionsTypesI, TagEnum } from "../../types";
+import { HeaderTypesI, MissionsTypesI } from "../../types";
 import { useQuery } from "@tanstack/react-query";
 import { fetchTodo } from "../../services/fetchDatas";
 import { Header } from "./Header";
@@ -23,20 +23,18 @@ const Section = ({ sectionData }: SectionType) => {
     event.preventDefault();
     const missionId = event.dataTransfer.getData("missionId");
 
-    console.log(sectionDatas[0]);
-
     if (sectionDatas) {
       const newMission: MissionsTypesI = {
         id: missionId,
         project_id: sectionData.id,
-        title: `Mission ${missionId}`,
-        description: sectionDatas[Number(missionId)].description,
-        estimated_hours: 0,
-        assigned_to: [],
-        status: "New",
-        priority: "Low",
-        due_date: new Date().toISOString(),
-        tags: [TagEnum.AppStore],
+        title: `${sectionDatas[Number(missionId)].title}`,
+        description: `${sectionDatas[Number(missionId)].description}`,
+        estimated_hours: sectionDatas[Number(missionId)].estimated_hours,
+        assigned_to: sectionDatas[Number(missionId)].assigned_to,
+        status: `${sectionDatas[Number(missionId)].status}`,
+        priority: `${sectionDatas[Number(missionId)].priority}`,
+        due_date: `${sectionDatas[Number(missionId)].due_date}`,
+        tags: sectionDatas[Number(missionId)].tags,
       };
 
       setSectionData((prev) => [...prev, newMission]);
@@ -61,7 +59,7 @@ const Section = ({ sectionData }: SectionType) => {
       <div className="flex flex-col px-4 py-4 gap-3 rounded-xl">
         {sectionDatas?.map((m: MissionsTypesI, index: number) => (
           <div key={index}>
-            <MissionCard data={m} />
+            <MissionCard data={m} index={index} />
           </div>
         ))}
       </div>

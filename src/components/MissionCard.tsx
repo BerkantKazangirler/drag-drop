@@ -6,14 +6,14 @@ import ModalContent from "./ModalContent";
 
 interface props {
   data: MissionsTypesI;
+  index: any;
 }
 
-export const MissionCard = ({ data }: props) => {
+export const MissionCard = ({ data, index }: props) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const handleDragStart = (event: React.DragEvent<HTMLDivElement>) => {
-    event.dataTransfer.setData("missionId", data.id);
-    console.log("Dragging MissionCard:", data.id);
+    event.dataTransfer.setData("missionId", index);
   };
 
   return (
