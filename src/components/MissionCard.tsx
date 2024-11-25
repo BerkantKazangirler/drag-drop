@@ -6,19 +6,23 @@ import ModalContent from "./ModalContent";
 
 interface props {
   data: MissionsTypesI;
-  onDrop: any;
 }
 
-export const MissionCard = ({ data, onDrop }: props) => {
+export const MissionCard = ({ data }: props) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+
+  const handleDragStart = (event: React.DragEvent<HTMLDivElement>) => {
+    event.dataTransfer.setData("missionId", data.id);
+    console.log("Dragging MissionCard:", data.id);
+  };
 
   return (
     <>
       <div
         className="bg-white p-4 rounded-xl hover:cursor-grabbing"
         onClick={() => setIsDialogOpen(true)}
-        draggable="true"
-        onDrop={(event) => onDrop(event)}
+        draggable
+        onDragStart={handleDragStart}
       >
         <div className="flex flex-row gap-1">
           {data.tags.map((m, index) => {

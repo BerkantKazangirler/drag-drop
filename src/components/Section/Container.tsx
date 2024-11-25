@@ -32,7 +32,7 @@ const SectionContainer = () => {
   return (
     <div className="flex gap-4 items-start">
       {data?.map((m, index) => (
-        <div key={index}>
+        <div key={m.id || index} id={m.id}>
           <Section sectionData={m} />
         </div>
       ))}
