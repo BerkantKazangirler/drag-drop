@@ -5,11 +5,11 @@ import { Header } from "./Header";
 import { MissionCard } from "../MissionCard";
 import { useEffect, useState } from "react";
 
-type SectionType = {
+type SectionProp = {
   sectionData: HeaderTypesI;
 };
 
-const Section = ({ sectionData }: SectionType) => {
+const Section = ({ sectionData }: SectionProp) => {
   const [sectionDatas, setSectionData] = useState<MissionsTypesI[]>([]);
   const { data } = useQuery({
     queryKey: ["todo", sectionData.id],

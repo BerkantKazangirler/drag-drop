@@ -3,11 +3,11 @@ import { GoPlus } from "react-icons/go";
 import { HeaderTypesI } from "../../types";
 import classNames from "classnames";
 
-interface prop {
+interface HeaderProp {
   data: HeaderTypesI;
 }
 
-export const Header = ({ data }: prop) => {
+export const Header = ({ data }: HeaderProp) => {
   const styles = {
     list_001: {
       border: "text-todo-blue",

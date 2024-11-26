@@ -8,11 +8,11 @@ import { GoChevronDown } from "react-icons/go";
 import { Menu, MenuButton, MenuItems } from "@headlessui/react";
 import classNames from "classnames";
 
-interface prop {
+interface HeaderProp {
   collapse: any;
 }
 
-export default function Header({ collapse }: prop) {
+export default function Header({ collapse }: HeaderProp) {
   return (
     <div className="flex justify-between h-[88px] border-b-2 border-border-color">
       <div className="flex flex-row gap-20">

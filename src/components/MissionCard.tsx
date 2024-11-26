@@ -4,12 +4,12 @@ import { useState } from "react";
 import { createPortal } from "react-dom";
 import ModalContent from "./ModalContent";
 
-interface props {
+interface MissionProps {
   data: MissionsTypesI;
   index: any;
 }
 
-export const MissionCard = ({ data, index }: props) => {
+export const MissionCard = ({ data, index }: MissionProps) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const handleDragStart = (event: React.DragEvent<HTMLDivElement>) => {

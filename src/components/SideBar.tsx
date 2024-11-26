@@ -11,11 +11,11 @@ import { SlOptions } from "react-icons/sl";
 import { MdLightbulb } from "react-icons/md";
 import classNames from "classnames";
 
-interface prop {
+interface SideBarProp {
   collapse: any;
 }
 
-export const SideBar = ({ collapse }: prop) => {
+export const SideBar = ({ collapse }: SideBarProp) => {
   return (
     <div
       className={classNames(

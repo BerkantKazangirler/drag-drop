@@ -1,11 +1,11 @@
 import classNames from "classnames";
 import { TagEnum, viewMapper } from "../types";
 
-interface prop {
+interface TagProp {
   tag: TagEnum;
 }
 
-export const Badge = ({ tag }: prop) => {
+export const Badge = ({ tag }: TagProp) => {
   const styles = {
     Offline: {
       bg: "bg-green-tag",

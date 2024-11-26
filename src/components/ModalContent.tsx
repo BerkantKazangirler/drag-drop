@@ -2,12 +2,12 @@ import { TfiClose } from "react-icons/tfi";
 import { MissionsTypesI } from "../types";
 import { useEffect, useRef } from "react";
 
-interface props {
+interface ModalProps {
   onClose: any;
   data: MissionsTypesI;
 }
 
-export default function ModalContent({ onClose, data }: props) {
+export default function ModalContent({ onClose, data }: ModalProps) {
   const modalRef = useRef();
   const wrapperRef = useRef();
 
