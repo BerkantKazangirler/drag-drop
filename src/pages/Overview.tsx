@@ -14,54 +14,37 @@ const Overview = () => {
       <div className="flex flex-row gap-8">
         <span className="font-medium text-5xl">Mobile App</span>
         <div className="flex flex-row gap-4">
-          <button
-            className="p-1 h-fit bg-element2-bg text-element-text rounded"
-            type="button"
-          >
+          <div className="p-1 h-fit bg-element2-bg text-element-text rounded">
             <GoPencil />
-          </button>
-          <button
-            className="p-1 h-fit bg-element2-bg text-element-text rounded"
-            type="button"
-          >
+          </div>
+          <div className="p-1 h-fit bg-element2-bg text-element-text rounded">
             <IoMdLink />
-          </button>
+          </div>
         </div>
       </div>
       <div className="flex flex-row justify-between w-full">
         <Menu>
           <div className="flex flex-row w-full gap-4">
             <MenuButton>
-              <button
-                className="border flex flex-row text-lg w-32 border-black/50 font-medium px-4 gap-2 rounded-t-lg py-1 text-black/50"
-                type="button"
-              >
+              <div className="border flex flex-row text-lg w-32 border-black/50 font-medium px-4 gap-2 rounded-t-lg py-1 text-black/50">
                 <CiFilter className="text-2xl" /> Filter
                 <GoChevronDown className="text-xl my-auto" />
-              </button>
+              </div>
             </MenuButton>
             <MenuItems className="absolute mt-9 w-32 z-10">
               <div className="flex flex-col border-black/50 border">
-                <button className="px-4 py-2 border-b" type="button">
-                  Tarihe Göre
-                </button>
-                <button
-                  className="px-4 py-2 text-sm rounded-b-lg"
-                  type="button"
-                >
+                <div className="px-4 py-2 border-b">Tarihe Göre</div>
+                <div className="px-4 py-2 text-sm rounded-b-lg">
                   Alfabetik Sıra
-                </button>
+                </div>
               </div>
             </MenuItems>
             <Menu>
               <MenuButton>
-                <button
-                  className="border flex flex-row text-lg border-black/50 font-medium px-4 gap-2 rounded-lg py-1 text-black/50"
-                  type="button"
-                >
+                <div className="border flex flex-row text-lg border-black/50 font-medium px-4 gap-2 rounded-lg py-1 text-black/50">
                   <BsCalendarDate className="text-sm my-auto" /> Today
                   <GoChevronDown className="text-xl my-auto" />
-                </button>
+                </div>
               </MenuButton>
               <MenuItems className="absolute w-60 mt-10 ml-5">
                 <div className="bg-slate-500 rounded-xl">
@@ -72,25 +55,16 @@ const Overview = () => {
           </div>
         </Menu>
         <div className="flex flex-row gap-4">
-          <button
-            className="border flex flex-row text-lg border-black/50 font-medium px-4 gap-2 rounded-lg py-1 text-black/50"
-            type="button"
-          >
+          <div className="border flex flex-row text-lg border-black/50 font-medium px-4 gap-2 rounded-lg py-1 text-black/50">
             <IoPeopleOutline className="text-xl my-auto" /> Share
-          </button>
+          </div>
           <span className="border-l"></span>
-          <button
-            className="flex flex-row text-lg font-medium px-2 gap-2 rounded-lg py-1 bg-element-text text-white"
-            type="button"
-          >
+          <div className="flex flex-row text-lg font-medium px-2 gap-2 rounded-lg py-1 bg-element-text text-white">
             <IoGrid className="text-xl my-auto" />
-          </button>
-          <button
-            className="flex flex-row text-lg font-medium px-2 gap-2 rounded-lg py-1 text-black/50"
-            type="button"
-          >
+          </div>
+          <div className="flex flex-row text-lg font-medium px-2 gap-2 rounded-lg py-1 text-black/50">
             <HiOutlineViewGrid className="text-xl my-auto" />
-          </button>
+          </div>
         </div>
       </div>
       <div className="flex flex-row gap-5">

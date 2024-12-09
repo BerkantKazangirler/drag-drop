@@ -5,7 +5,12 @@ import Section from "./Section";
 import { Loading } from "./Loading";
 
 const SectionContainer = () => {
-  const { data, isLoading, isFetching } = useQuery<HeaderTypesI[]>({
+  const {
+    data: SectionData,
+    isLoading,
+    isFetching,
+    refetch: allRefetch,
+  } = useQuery<HeaderTypesI[]>({
     queryKey: ["sections"],
     queryFn: () => fetchSections().then((res) => res),
   });
@@ -13,27 +18,23 @@ const SectionContainer = () => {
   if (isLoading || isFetching) {
     return (
       <div className="flex gap-4 items-start flex-row">
-        <div className="bg-element-bg/60 rounded-xl animate-pulse flex max-h-[900px] overflow-y-auto overflow-x-hidden flex-col h-screen w-[400px]">
-          <Loading />
-        </div>
-        <div className="bg-element-bg/60 rounded-xl flex max-h-[900px] animate-pulse overflow-y-auto overflow-x-hidden flex-col h-screen w-[400px]">
-          <Loading />
-        </div>
-        <div className="bg-element-bg/60 rounded-xl flex max-h-[900px] animate-pulse overflow-y-auto overflow-x-hidden flex-col h-screen w-[400px]">
-          <Loading />
-        </div>
-        <div className="bg-element-bg/60 rounded-xl flex max-h-[900px] animate-pulse overflow-y-auto overflow-x-hidden flex-col h-screen w-[400px]">
-          <Loading />
-        </div>
+        {Array(4).map((index) => (
+          <div
+            className="bg-element-bg/60 rounded-xl animate-pulse flex max-h-[900px] overflow-y-auto overflow-x-hidden flex-col h-screen w-[400px]"
+            key={index}
+          >
+            <Loading />
+          </div>
+        ))}
       </div>
     );
   }
 
   return (
     <div className="flex gap-4 items-start">
-      {data?.map((m, index) => (
+      {SectionData?.map((m, index) => (
         <div key={m.id || index} id={m.id}>
-          <Section sectionData={m} />
+          <Section sectionData={m} allRefetch={allRefetch} />
         </div>
       ))}
     </div>

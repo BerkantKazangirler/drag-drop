@@ -1,4 +1,4 @@
-import { HeaderTypesI, UserTypesI } from "../types";
+import { HeaderTypesI, MissionsTypesI, UserTypesI } from "../types";
 
 export function fetchUsers(): Promise<UserTypesI[]> {
   return fetch("http://localhost:3000/users").then((res) => res.json());
@@ -10,6 +10,10 @@ export function fetchTodo({ status }: { status?: string }) {
   return fetch("http://localhost:3000/todos?" + params).then((res) =>
     res.json()
   );
+}
+
+export function fetchAllTodos(): Promise<MissionsTypesI[]> {
+  return fetch("http://localhost:3000/todos").then((res) => res.json());
 }
 
 export function fetchSections(): Promise<HeaderTypesI[]> {

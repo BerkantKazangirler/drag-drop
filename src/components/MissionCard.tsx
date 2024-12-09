@@ -6,14 +6,13 @@ import ModalContent from "./ModalContent";
 
 interface MissionProps {
   data: MissionsTypesI;
-  index: any;
 }
 
-export const MissionCard = ({ data, index }: MissionProps) => {
+export const MissionCard = ({ data }: MissionProps) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const handleDragStart = (event: React.DragEvent<HTMLDivElement>) => {
-    event.dataTransfer.setData("missionId", index);
+    event.dataTransfer.setData("missionId", data.id);
   };
 
   return (
@@ -23,15 +22,15 @@ export const MissionCard = ({ data, index }: MissionProps) => {
         onClick={() => setIsDialogOpen(true)}
         draggable
         onDragStart={handleDragStart}
+        id={data.id}
       >
         <div className="flex flex-row gap-1">
-          {data.tags.map((m, index) => {
-            return (
+          {data.tags &&
+            data.tags.map((m, index) => (
               <div key={index}>
                 <Badge tag={m} />
               </div>
-            );
-          })}
+            ))}
         </div>
 
         <span className="font-medium text-lg justify-start flex">

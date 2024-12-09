@@ -1,577 +1,606 @@
 {
   "basliklar": [
-      {
-          "id": "list_001",
-          "project_id": "project_001",
-          "name": "To Do",
-          "tasks": ["task_002", "task_008", "task_0010", "task_012", "task_014", "task_017", "task_020", "task_024", "task_028"]
-      },
-      {
-          "id": "list_002",
-          "project_id": "project_001",
-          "name": "In Progress",
-          "tasks": [
-              "task_001", "task_004"
-          ]
-      },
-      {
-          "id": "list_003",
-          "project_id": "project_001",
-          "name": "Done",
-          "tasks": ["task_005", "task_006", "task_009", "task_011","task_015", "task_016", "task_018", "task_019", "task_021", "task_022", "task_023", "task_025", "task_026", "task_027", "task_028", "task_030"]
-        },
-      {
-          "id": "list_004",
-          "project_id": "project_002",
-          "name": "Completed",
-          "tasks": [
-              "task_003", "task_007", "task_013"
-          ]
-      }
+    {
+      "id": "list_001",
+      "project_id": "project_001",
+      "name": "To Do",
+      "tasks": [
+        "task_002",
+        "task_008",
+        "task_0010",
+        "task_012",
+        "task_014",
+        "task_017",
+        "task_020",
+        "task_024",
+        "task_028"
+      ]
+    },
+    {
+      "id": "list_002",
+      "project_id": "project_001",
+      "name": "In Progress",
+      "tasks": [
+        "task_001",
+        "task_004"
+      ]
+    },
+    {
+      "id": "list_003",
+      "project_id": "project_001",
+      "name": "Done",
+      "tasks": [
+        "task_005",
+        "task_006",
+        "task_009",
+        "task_011",
+        "task_015",
+        "task_016",
+        "task_018",
+        "task_019",
+        "task_021",
+        "task_022",
+        "task_023",
+        "task_025",
+        "task_026",
+        "task_027",
+        "task_028",
+        "task_030"
+      ]
+    },
+    {
+      "id": "list_004",
+      "project_id": "project_002",
+      "name": "Completed",
+      "tasks": [
+        "task_003",
+        "task_007",
+        "task_013"
+      ]
+    }
   ],
   "todos": [
-      {
-          "id": "task_001",
-          "project_id": "project_001",
-          "title": "Mobil Uygulama Wireframe Tasarımı",
-          "description": "Uygulamanın temel arayüz tasarımı.",
-          "estimated_hours": 12,
-          "assigned_to": [
-              "user_002"
-          ],
-          "status": "list_002",
-          "priority": "High",
-          "due_date": "2023-09-15",
-          "tags": [
-              "UI",
-              "Design"
-          ]
-      },
-      {
-          "id": "task_002",
-          "project_id": "project_001",
-          "title": "API Entegrasyonu",
-          "description": "Mobil uygulama için API bağlantıları yapılacak.",
-          "estimated_hours": 20,
-          "assigned_to": [
-              "user_003"
-          ],
-          "status": "list_001",
-          "priority": "Medium",
-          "due_date": "2023-10-01",
-          "tags": [
-              "Backend",
-              "Integration"
-          ]
-      },
-      {
-          "id": "task_003",
-          "project_id": "project_002",
-          "title": "Ana Sayfa Yeniden Tasarımı",
-          "description": "Web sitesinin ana sayfa tasarımı güncellenecek.",
-          "estimated_hours": 15,
-          "assigned_to": [
-              "user_002",
-              "user_004"
-          ],
-          "status": "list_004",
-          "priority": "High",
-          "due_date": "2023-11-01",
-          "tags": [
-              "UI",
-              "Design"
-          ]
-      },
-      {
-          "id": "task_004",
-          "project_id": "project_001",
-          "title": "Veritabanı Yapısı Oluşturma",
-          "description": "Uygulama için gerekli veritabanı yapısı oluşturulacak.",
-          "estimated_hours": 30,
-          "assigned_to": [
-              "user_003"
-          ],
-          "status": "list_002",
-          "priority": "High",
-          "due_date": "2023-09-30",
-          "tags": [
-              "Database",
-              "Backend"
-          ]
-      },
-      {
-          "id": "task_005",
-          "project_id": "project_001",
-          "title": "Kullanıcı Testleri Hazırlığı",
-          "description": "Kullanıcı testi senaryoları hazırlanacak.",
-          "estimated_hours": 10,
-          "assigned_to": [
-              "user_004"
-          ],
-          "status": "list_003",
-          "priority": "Medium",
-          "due_date": "2023-10-05",
-          "tags": [
-              "QA",
-              "Testing"
-          ]
-      },
-      {
-          "id": "task_006",
-          "project_id": "project_002",
-          "title": "Hata Ayıklama ve Düzeltme",
-          "description": "Sistemdeki hata ve eksikler giderilecek.",
-          "estimated_hours": 18,
-          "assigned_to": [
-              "user_003"
-          ],
-          "status": "list_003",
-          "priority": "High",
-          "due_date": "2023-09-20",
-          "tags": [
-              "Bug Fix",
-              "QA"
-          ]
-      },
-      {
-          "id": "task_007",
-          "project_id": "project_001",
-          "title": "Giriş Ekranı Tasarımı",
-          "description": "Mobil uygulamanın giriş ekranı tasarımı yapılacak.",
-          "estimated_hours": 8,
-          "assigned_to": [
-              "user_002"
-          ],
-          "status": "list_004",
-          "priority": "Medium",
-          "due_date": "2023-09-25",
-          "tags": [
-              "UI",
-              "Design"
-          ]
-      },
-      {
-          "id": "task_008",
-          "project_id": "project_001",
-          "title": "Bildirim Sistemi Entegrasyonu",
-          "description": "Bildirim sistemi kurulacak ve API bağlantıları yapılacak.",
-          "estimated_hours": 12,
-          "assigned_to": [
-              "user_003"
-          ],
-          "status": "list_001",
-          "priority": "High",
-          "due_date": "2023-10-10",
-          "tags": [
-              "Backend",
-              "Notification"
-          ]
-      },
-      {
-          "id": "task_009",
-          "project_id": "project_001",
-          "title": "Görsel Optimizasyonu",
-          "description": "Mobil uygulama görselleri optimize edilecek.",
-          "estimated_hours": 6,
-          "assigned_to": [
-              "user_004"
-          ],
-          "status": "list_003",
-          "priority": "Low",
-          "due_date": "2023-10-15",
-          "tags": [
-              "UI",
-              "Optimization"
-          ]
-      },
-      {
-          "id": "task_010",
-          "project_id": "project_002",
-          "title": "İçerik Güncellemeleri",
-          "description": "Web sitesindeki içerikler güncellenecek.",
-          "estimated_hours": 10,
-          "assigned_to": [
-              "user_002"
-          ],
-          "status": "list_001",
-          "priority": "Medium",
-          "due_date": "2023-10-20",
-          "tags": [
-              "Content",
-              "Web"
-          ]
-      },
-      {
-          "id": "task_011",
-          "project_id": "project_002",
-          "title": "Kullanıcı Geri Bildirimleri",
-          "description": "Kullanıcı geri bildirimleri analiz edilecek.",
-          "estimated_hours": 5,
-          "assigned_to": [
-              "user_004"
-          ],
-          "status": "list_003",
-          "priority": "Medium",
-          "due_date": "2023-09-22",
-          "tags": [
-              "Feedback",
-              "QA"
-          ]
-      },
-      {
-          "id": "task_012",
-          "project_id": "project_002",
-          "title": "Veri Göçü",
-          "description": "Eski sistemden yeni sisteme veri taşınacak.",
-          "estimated_hours": 25,
-          "assigned_to": [
-              "user_003"
-          ],
-          "status": "list_001",
-          "priority": "High",
-          "due_date": "2023-11-15",
-          "tags": [
-              "Database",
-              "Migration"
-          ]
-      },
-      {
-          "id": "task_013",
-          "project_id": "project_001",
-          "title": "İzinler ve Rol Yönetimi",
-          "description": "Uygulama içi izin ve rol yönetimi ayarlanacak.",
-          "estimated_hours": 14,
-          "assigned_to": [
-              "user_002"
-          ],
-          "status": "list_004",
-          "priority": "High",
-          "due_date": "2023-09-30",
-          "tags": [
-              "Security",
-              "Backend"
-          ]
-      },
-      {
-          "id": "task_014",
-          "project_id": "project_001",
-          "title": "Hata Ayıklama",
-          "description": "Geliştirme sürecinde bulunan hatalar çözülecek.",
-          "estimated_hours": 22,
-          "assigned_to": [
-              "user_003"
-          ],
-          "status": "list_001",
-          "priority": "Medium",
-          "due_date": "2023-10-18",
-          "tags": [
-              "Debugging",
-              "QA"
-          ]
-      },
-      {
-          "id": "task_015",
-          "project_id": "project_002",
-          "title": "SEO Optimizasyonu",
-          "description": "Web sitesinin SEO performansı artırılacak.",
-          "estimated_hours": 10,
-          "assigned_to": [
-              "user_002"
-          ],
-          "status": "list_003",
-          "priority": "High",
-          "due_date": "2023-10-05",
-          "tags": [
-              "SEO",
-              "Optimization"
-          ]
-      },
-      {
-          "id": "task_016",
-          "project_id": "project_001",
-          "title": "Çoklu Dil Desteği",
-          "description": "Mobil uygulama çoklu dil desteği eklenecek.",
-          "estimated_hours": 24,
-          "assigned_to": [
-              "user_003",
-              "user_004"
-          ],
-          "status": "list_003",
-          "priority": "High",
-          "due_date": "2023-12-01",
-          "tags": [
-              "Localization",
-              "Backend"
-          ]
-      },
-      {
-          "id": "task_017",
-          "project_id": "project_002",
-          "title": "Güvenlik Testleri",
-          "description": "Uygulamanın güvenlik testleri yapılacak.",
-          "estimated_hours": 15,
-          "assigned_to": [
-              "user_004"
-          ],
-          "status": "list_001",
-          "priority": "High",
-          "due_date": "2023-11-10",
-          "tags": [
-              "Security",
-              "QA"
-          ]
-      },
-      {
-          "id": "task_018",
-          "project_id": "project_001",
-          "title": "Kullanıcı Profili Sayfası",
-          "description": "Kullanıcı profili sayfası tasarımı yapılacak.",
-          "estimated_hours": 10,
-          "assigned_to": [
-              "user_002"
-          ],
-          "status": "list_003",
-          "priority": "Medium",
-          "due_date": "2023-09-28",
-          "tags": [
-              "UI",
-              "Design"
-          ]
-      },
-      {
-          "id": "task_019",
-          "project_id": "project_002",
-          "title": "Analiz Raporları",
-          "description": "Veri analiz raporları oluşturulacak.",
-          "estimated_hours": 20,
-          "assigned_to": [
-              "user_003"
-          ],
-          "status": "list_003",
-          "priority": "High",
-          "due_date": "2023-11-20",
-          "tags": [
-              "Reporting",
-              "Data Analysis"
-          ]
-      },
-      {
-          "id": "task_020",
-          "project_id": "project_001",
-          "title": "Geri Bildirim Formu",
-          "description": "Uygulamada geri bildirim formu oluşturulacak.",
-          "estimated_hours": 8,
-          "assigned_to": [
-              "user_004"
-          ],
-          "status": "list_001",
-          "priority": "Low",
-          "due_date": "2023-09-27",
-          "tags": [
-              "Form",
-              "UI"
-          ]
-      },
-      {
-          "id": "task_021",
-          "project_id": "project_001",
-          "title": "Yedekleme Sistemi",
-          "description": "Veri yedekleme sistemi kurulacak.",
-          "estimated_hours": 18,
-          "assigned_to": [
-              "user_003"
-          ],
-          "status": "list_003",
-          "priority": "High",
-          "due_date": "2023-10-25",
-          "tags": [
-              "Database",
-              "Backup"
-          ]
-      },
-      {
-          "id": "task_022",
-          "project_id": "project_002",
-          "title": "Sosyal Medya Entegrasyonu",
-          "description": "Sosyal medya API entegrasyonu yapılacak.",
-          "estimated_hours": 16,
-          "assigned_to": [
-              "user_002"
-          ],
-          "status": "list_003",
-          "priority": "Medium",
-          "due_date": "2023-10-30",
-          "tags": [
-              "Integration",
-              "Social Media"
-          ]
-      },
-      {
-          "id": "task_023",
-          "project_id": "project_001",
-          "title": "Sunucu Yükseltme",
-          "description": "Sunucu kaynakları artırılacak.",
-          "estimated_hours": 20,
-          "assigned_to": [
-              "user_003"
-          ],
-          "status": "list_003",
-          "priority": "High",
-          "due_date": "2023-11-05",
-          "tags": [
-              "Backend",
-              "Infrastructure"
-          ]
-      },
-      {
-          "id": "task_024",
-          "project_id": "project_001",
-          "title": "Mobil Uygulama Yayın Hazırlığı",
-          "description": "Uygulama mağazasına gönderilmek için hazırlık yapılacak.",
-          "estimated_hours": 12,
-          "assigned_to": [
-              "user_002"
-          ],
-          "status": "list_001",
-          "priority": "High",
-          "due_date": "2023-10-20",
-          "tags": [
-              "Release",
-              "App Store"
-          ]
-      },
-      {
-          "id": "task_025",
-          "project_id": "project_002",
-          "title": "Kullanıcı Eğitimleri",
-          "description": "Kullanıcılar için eğitim materyalleri hazırlanacak.",
-          "estimated_hours": 8,
-          "assigned_to": [
-              "user_004"
-          ],
-          "status": "list_003",
-          "priority": "Medium",
-          "due_date": "2023-12-15",
-          "tags": [
-              "Training",
-              "Documentation"
-          ]
-      },
-      {
-          "id": "task_026",
-          "project_id": "project_001",
-          "title": "Çevrimdışı Mod Desteği",
-          "description": "Uygulamada çevrimdışı mod desteği eklenecek.",
-          "estimated_hours": 14,
-          "assigned_to": [
-              "user_003"
-          ],
-          "status": "list_003",
-          "priority": "Medium",
-          "due_date": "2023-11-18",
-          "tags": [
-              "Offline",
-              "Backend"
-          ]
-      },
-      {
-          "id": "task_027",
-          "project_id": "project_002",
-          "title": "Anket Formu Entegrasyonu",
-          "description": "Kullanıcılar için anket formu oluşturulacak.",
-          "estimated_hours": 6,
-          "assigned_to": [
-              "user_004"
-          ],
-          "status": "list_003",
-          "priority": "Low",
-          "due_date": "2023-12-10",
-          "tags": [
-              "Form",
-              "Feedback"
-          ]
-      },
-      {
-          "id": "task_028",
-          "project_id": "project_001",
-          "title": "İletişim Modülü",
-          "description": "Kullanıcılar arası iletişim modülü eklenecek.",
-          "estimated_hours": 15,
-          "assigned_to": [
-              "user_002"
-          ],
-          "status": "list_001",
-          "priority": "High",
-          "due_date": "2023-11-30",
-          "tags": [
-              "Communication",
-              "Backend"
-          ]
-      },
-      {
-          "id": "task_029",
-          "project_id": "project_001",
-          "title": "Veritabanı Optimizasyonu",
-          "description": "Veritabanı performans iyileştirmesi yapılacak.",
-          "estimated_hours": 20,
-          "assigned_to": [
-              "user_003"
-          ],
-          "status": "list_003",
-          "priority": "High",
-          "due_date": "2023-12-05",
-          "tags": [
-              "Database",
-              "Optimization"
-          ]
-      },
-      {
-          "id": "task_030",
-          "project_id": "project_002",
-          "title": "Yedekleme Planı Oluşturma",
-          "description": "Sistem için düzenli yedekleme planı yapılacak.",
-          "estimated_hours": 10,
-          "assigned_to": [
-              "user_004"
-          ],
-          "status": "list_003",
-          "priority": "Medium",
-          "due_date": "2023-11-25",
-          "tags": [
-              "Backup",
-              "Security"
-          ]
-      }
+    {
+      "id": "task_001",
+      "project_id": "project_001",
+      "title": "Mobil Uygulama Wireframe Tasarımı",
+      "description": "Uygulamanın temel arayüz tasarımı.",
+      "estimated_hours": 12,
+      "assigned_to": [
+        "user_002"
+      ],
+      "status": "list_001",
+      "priority": "High",
+      "due_date": "2023-09-15",
+      "tags": [
+        "UI",
+        "Design"
+      ]
+    },
+    {
+      "id": "task_002",
+      "project_id": "project_001",
+      "title": "API Entegrasyonu",
+      "description": "Mobil uygulama için API bağlantıları yapılacak.",
+      "estimated_hours": 20,
+      "assigned_to": [
+        "user_003"
+      ],
+      "status": "list_002",
+      "priority": "Medium",
+      "due_date": "2023-10-01",
+      "tags": [
+        "Backend",
+        "Integration"
+      ]
+    },
+    {
+      "id": "task_003",
+      "project_id": "project_002",
+      "title": "Ana Sayfa Yeniden Tasarımı",
+      "description": "Web sitesinin ana sayfa tasarımı güncellenecek.",
+      "estimated_hours": 15,
+      "assigned_to": [
+        "user_002",
+        "user_004"
+      ],
+      "status": "list_004",
+      "priority": "High",
+      "due_date": "2023-11-01",
+      "tags": [
+        "UI",
+        "Design"
+      ]
+    },
+    {
+      "id": "task_004",
+      "project_id": "project_001",
+      "title": "Veritabanı Yapısı Oluşturma",
+      "description": "Uygulama için gerekli veritabanı yapısı oluşturulacak.",
+      "estimated_hours": 30,
+      "assigned_to": [
+        "user_003"
+      ],
+      "status": "list_002",
+      "priority": "High",
+      "due_date": "2023-09-30",
+      "tags": [
+        "Database",
+        "Backend"
+      ]
+    },
+    {
+      "id": "task_005",
+      "project_id": "project_001",
+      "title": "Kullanıcı Testleri Hazırlığı",
+      "description": "Kullanıcı testi senaryoları hazırlanacak.",
+      "estimated_hours": 10,
+      "assigned_to": [
+        "user_004"
+      ],
+      "status": "list_003",
+      "priority": "Medium",
+      "due_date": "2023-10-05",
+      "tags": [
+        "QA",
+        "Testing"
+      ]
+    },
+    {
+      "id": "task_006",
+      "project_id": "project_002",
+      "title": "Hata Ayıklama ve Düzeltme",
+      "description": "Sistemdeki hata ve eksikler giderilecek.",
+      "estimated_hours": 18,
+      "assigned_to": [
+        "user_003"
+      ],
+      "status": "list_003",
+      "priority": "High",
+      "due_date": "2023-09-20",
+      "tags": [
+        "Bug Fix",
+        "QA"
+      ]
+    },
+    {
+      "id": "task_007",
+      "project_id": "project_001",
+      "title": "Giriş Ekranı Tasarımı",
+      "description": "Mobil uygulamanın giriş ekranı tasarımı yapılacak.",
+      "estimated_hours": 8,
+      "assigned_to": [
+        "user_002"
+      ],
+      "status": "list_004",
+      "priority": "Medium",
+      "due_date": "2023-09-25",
+      "tags": [
+        "UI",
+        "Design"
+      ]
+    },
+    {
+      "id": "task_008",
+      "project_id": "project_001",
+      "title": "Bildirim Sistemi Entegrasyonu",
+      "description": "Bildirim sistemi kurulacak ve API bağlantıları yapılacak.",
+      "estimated_hours": 12,
+      "assigned_to": [
+        "user_003"
+      ],
+      "status": "list_002",
+      "priority": "High",
+      "due_date": "2023-10-10",
+      "tags": [
+        "Backend",
+        "Notification"
+      ]
+    },
+    {
+      "id": "task_009",
+      "project_id": "project_001",
+      "title": "Görsel Optimizasyonu",
+      "description": "Mobil uygulama görselleri optimize edilecek.",
+      "estimated_hours": 6,
+      "assigned_to": [
+        "user_004"
+      ],
+      "status": "list_003",
+      "priority": "Low",
+      "due_date": "2023-10-15",
+      "tags": [
+        "UI",
+        "Optimization"
+      ]
+    },
+    {
+      "id": "task_010",
+      "project_id": "project_002",
+      "title": "İçerik Güncellemeleri",
+      "description": "Web sitesindeki içerikler güncellenecek.",
+      "estimated_hours": 10,
+      "assigned_to": [
+        "user_002"
+      ],
+      "status": "list_001",
+      "priority": "Medium",
+      "due_date": "2023-10-20",
+      "tags": [
+        "Content",
+        "Web"
+      ]
+    },
+    {
+      "id": "task_011",
+      "project_id": "project_002",
+      "title": "Kullanıcı Geri Bildirimleri",
+      "description": "Kullanıcı geri bildirimleri analiz edilecek.",
+      "estimated_hours": 5,
+      "assigned_to": [
+        "user_004"
+      ],
+      "status": "list_003",
+      "priority": "Medium",
+      "due_date": "2023-09-22",
+      "tags": [
+        "Feedback",
+        "QA"
+      ]
+    },
+    {
+      "id": "task_012",
+      "project_id": "project_002",
+      "title": "Veri Göçü",
+      "description": "Eski sistemden yeni sisteme veri taşınacak.",
+      "estimated_hours": 25,
+      "assigned_to": [
+        "user_003"
+      ],
+      "status": "list_001",
+      "priority": "High",
+      "due_date": "2023-11-15",
+      "tags": [
+        "Database",
+        "Migration"
+      ]
+    },
+    {
+      "id": "task_013",
+      "project_id": "project_001",
+      "title": "İzinler ve Rol Yönetimi",
+      "description": "Uygulama içi izin ve rol yönetimi ayarlanacak.",
+      "estimated_hours": 14,
+      "assigned_to": [
+        "user_002"
+      ],
+      "status": "list_004",
+      "priority": "High",
+      "due_date": "2023-09-30",
+      "tags": [
+        "Security",
+        "Backend"
+      ]
+    },
+    {
+      "id": "task_014",
+      "project_id": "project_001",
+      "title": "Hata Ayıklama",
+      "description": "Geliştirme sürecinde bulunan hatalar çözülecek.",
+      "estimated_hours": 22,
+      "assigned_to": [
+        "user_003"
+      ],
+      "status": "list_001",
+      "priority": "Medium",
+      "due_date": "2023-10-18",
+      "tags": [
+        "Debugging",
+        "QA"
+      ]
+    },
+    {
+      "id": "task_015",
+      "project_id": "project_002",
+      "title": "SEO Optimizasyonu",
+      "description": "Web sitesinin SEO performansı artırılacak.",
+      "estimated_hours": 10,
+      "assigned_to": [
+        "user_002"
+      ],
+      "status": "list_003",
+      "priority": "High",
+      "due_date": "2023-10-05",
+      "tags": [
+        "SEO",
+        "Optimization"
+      ]
+    },
+    {
+      "id": "task_016",
+      "project_id": "project_001",
+      "title": "Çoklu Dil Desteği",
+      "description": "Mobil uygulama çoklu dil desteği eklenecek.",
+      "estimated_hours": 24,
+      "assigned_to": [
+        "user_003",
+        "user_004"
+      ],
+      "status": "list_003",
+      "priority": "High",
+      "due_date": "2023-12-01",
+      "tags": [
+        "Localization",
+        "Backend"
+      ]
+    },
+    {
+      "id": "task_017",
+      "project_id": "project_002",
+      "title": "Güvenlik Testleri",
+      "description": "Uygulamanın güvenlik testleri yapılacak.",
+      "estimated_hours": 15,
+      "assigned_to": [
+        "user_004"
+      ],
+      "status": "list_001",
+      "priority": "High",
+      "due_date": "2023-11-10",
+      "tags": [
+        "Security",
+        "QA"
+      ]
+    },
+    {
+      "id": "task_018",
+      "project_id": "project_001",
+      "title": "Kullanıcı Profili Sayfası",
+      "description": "Kullanıcı profili sayfası tasarımı yapılacak.",
+      "estimated_hours": 10,
+      "assigned_to": [
+        "user_002"
+      ],
+      "status": "list_003",
+      "priority": "Medium",
+      "due_date": "2023-09-28",
+      "tags": [
+        "UI",
+        "Design"
+      ]
+    },
+    {
+      "id": "task_019",
+      "project_id": "project_002",
+      "title": "Analiz Raporları",
+      "description": "Veri analiz raporları oluşturulacak.",
+      "estimated_hours": 20,
+      "assigned_to": [
+        "user_003"
+      ],
+      "status": "list_003",
+      "priority": "High",
+      "due_date": "2023-11-20",
+      "tags": [
+        "Reporting",
+        "Data Analysis"
+      ]
+    },
+    {
+      "id": "task_020",
+      "project_id": "project_001",
+      "title": "Geri Bildirim Formu",
+      "description": "Uygulamada geri bildirim formu oluşturulacak.",
+      "estimated_hours": 8,
+      "assigned_to": [
+        "user_004"
+      ],
+      "status": "list_001",
+      "priority": "Low",
+      "due_date": "2023-09-27",
+      "tags": [
+        "Form",
+        "UI"
+      ]
+    },
+    {
+      "id": "task_021",
+      "project_id": "project_001",
+      "title": "Yedekleme Sistemi",
+      "description": "Veri yedekleme sistemi kurulacak.",
+      "estimated_hours": 18,
+      "assigned_to": [
+        "user_003"
+      ],
+      "status": "list_003",
+      "priority": "High",
+      "due_date": "2023-10-25",
+      "tags": [
+        "Database",
+        "Backup"
+      ]
+    },
+    {
+      "id": "task_022",
+      "project_id": "project_002",
+      "title": "Sosyal Medya Entegrasyonu",
+      "description": "Sosyal medya API entegrasyonu yapılacak.",
+      "estimated_hours": 16,
+      "assigned_to": [
+        "user_002"
+      ],
+      "status": "list_003",
+      "priority": "Medium",
+      "due_date": "2023-10-30",
+      "tags": [
+        "Integration",
+        "Social Media"
+      ]
+    },
+    {
+      "id": "task_023",
+      "project_id": "project_001",
+      "title": "Sunucu Yükseltme",
+      "description": "Sunucu kaynakları artırılacak.",
+      "estimated_hours": 20,
+      "assigned_to": [
+        "user_003"
+      ],
+      "status": "list_003",
+      "priority": "High",
+      "due_date": "2023-11-05",
+      "tags": [
+        "Backend",
+        "Infrastructure"
+      ]
+    },
+    {
+      "id": "task_024",
+      "project_id": "project_001",
+      "title": "Mobil Uygulama Yayın Hazırlığı",
+      "description": "Uygulama mağazasına gönderilmek için hazırlık yapılacak.",
+      "estimated_hours": 12,
+      "assigned_to": [
+        "user_002"
+      ],
+      "status": "list_001",
+      "priority": "High",
+      "due_date": "2023-10-20",
+      "tags": [
+        "Release",
+        "App Store"
+      ]
+    },
+    {
+      "id": "task_025",
+      "project_id": "project_002",
+      "title": "Kullanıcı Eğitimleri",
+      "description": "Kullanıcılar için eğitim materyalleri hazırlanacak.",
+      "estimated_hours": 8,
+      "assigned_to": [
+        "user_004"
+      ],
+      "status": "list_003",
+      "priority": "Medium",
+      "due_date": "2023-12-15",
+      "tags": [
+        "Training",
+        "Documentation"
+      ]
+    },
+    {
+      "id": "task_026",
+      "project_id": "project_001",
+      "title": "Çevrimdışı Mod Desteği",
+      "description": "Uygulamada çevrimdışı mod desteği eklenecek.",
+      "estimated_hours": 14,
+      "assigned_to": [
+        "user_003"
+      ],
+      "status": "list_003",
+      "priority": "Medium",
+      "due_date": "2023-11-18",
+      "tags": [
+        "Offline",
+        "Backend"
+      ]
+    },
+    {
+      "id": "task_027",
+      "project_id": "project_002",
+      "title": "Anket Formu Entegrasyonu",
+      "description": "Kullanıcılar için anket formu oluşturulacak.",
+      "estimated_hours": 6,
+      "assigned_to": [
+        "user_004"
+      ],
+      "status": "list_003",
+      "priority": "Low",
+      "due_date": "2023-12-10",
+      "tags": [
+        "Form",
+        "Feedback"
+      ]
+    },
+    {
+      "id": "task_028",
+      "project_id": "project_001",
+      "title": "İletişim Modülü",
+      "description": "Kullanıcılar arası iletişim modülü eklenecek.",
+      "estimated_hours": 15,
+      "assigned_to": [
+        "user_002"
+      ],
+      "status": "list_001",
+      "priority": "High",
+      "due_date": "2023-11-30",
+      "tags": [
+        "Communication",
+        "Backend"
+      ]
+    },
+    {
+      "id": "task_029",
+      "project_id": "project_001",
+      "title": "Veritabanı Optimizasyonu",
+      "description": "Veritabanı performans iyileştirmesi yapılacak.",
+      "estimated_hours": 20,
+      "assigned_to": [
+        "user_003"
+      ],
+      "status": "list_003",
+      "priority": "High",
+      "due_date": "2023-12-05",
+      "tags": [
+        "Database",
+        "Optimization"
+      ]
+    },
+    {
+      "id": "task_030",
+      "project_id": "project_002",
+      "title": "Yedekleme Planı Oluşturma",
+      "description": "Sistem için düzenli yedekleme planı yapılacak.",
+      "estimated_hours": 10,
+      "assigned_to": [
+        "user_004"
+      ],
+      "status": "list_003",
+      "priority": "Medium",
+      "due_date": "2023-11-25",
+      "tags": [
+        "Backup",
+        "Security"
+      ]
+    }
   ],
   "users": [
-      {
-          "id": "user_001",
-          "name": "Ali",
-          "surname": "Yılmaz",
-          "email": "ali.yilmaz@example.com",
-          "role": "Admin"
-      },
-      {
-          "id": "user_002",
-          "name": "Ayşe",
-          "surname": "Kara",
-          "email": "ayse.kara@example.com",
-          "role": "Project Manager"
-      },
-      {
-          "id": "user_003",
-          "name": "Mehmet",
-          "surname": "Şahin",
-          "email": "mehmet.sahin@example.com",
-          "role": "Developer"
-      },
-      {
-          "id": "user_004",
-          "name": "Zeynep",
-          "surname": "Demir",
-          "email": "zeynep.demir@example.com",
-          "role": "QA Engineer"
-      }
+    {
+      "id": "user_001",
+      "name": "Ali",
+      "surname": "Yılmaz",
+      "email": "ali.yilmaz@example.com",
+      "role": "Admin"
+    },
+    {
+      "id": "user_002",
+      "name": "Ayşe",
+      "surname": "Kara",
+      "email": "ayse.kara@example.com",
+      "role": "Project Manager"
+    },
+    {
+      "id": "user_003",
+      "name": "Mehmet",
+      "surname": "Şahin",
+      "email": "mehmet.sahin@example.com",
+      "role": "Developer"
+    },
+    {
+      "id": "user_004",
+      "name": "Zeynep",
+      "surname": "Demir",
+      "email": "zeynep.demir@example.com",
+      "role": "QA Engineer"
+    }
   ]
 }
-

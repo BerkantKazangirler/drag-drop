@@ -3,41 +3,43 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchTodo } from "../../services/fetchDatas";
 import { Header } from "./Header";
 import { MissionCard } from "../MissionCard";
-import { useEffect, useState } from "react";
 
-type SectionProp = {
+interface SectionProp {
   sectionData: HeaderTypesI;
-};
+  allRefetch: any;
+}
 
-const Section = ({ sectionData }: SectionProp) => {
-  const [sectionDatas, setSectionData] = useState<MissionsTypesI[]>([]);
+const Section = ({ sectionData, allRefetch }: SectionProp) => {
   const { data } = useQuery({
     queryKey: ["todo", sectionData.id],
     queryFn: () =>
       fetchTodo({
         status: sectionData.id,
-      }).then((res) => res),
+      }),
   });
 
-  const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
+  const updateMission = (missionId: string, targetStatusId: string) => {
+    if (targetStatusId !== null) {
+      fetch("http://localhost:3000/todos/" + missionId, {
+        method: "PATCH",
+        body: JSON.stringify({
+          status: targetStatusId,
+        }),
+      })
+        .then((res) => res.json())
+        .then(() => {
+          allRefetch();
+        });
+    }
+  };
+
+  const handleDrop = (event: any) => {
     event.preventDefault();
     const missionId = event.dataTransfer.getData("missionId");
 
-    if (sectionDatas) {
-      const newMission: MissionsTypesI = {
-        id: missionId,
-        project_id: sectionData.id,
-        title: `${sectionDatas[Number(missionId)].title}`,
-        description: `${sectionDatas[Number(missionId)].description}`,
-        estimated_hours: sectionDatas[Number(missionId)].estimated_hours,
-        assigned_to: sectionDatas[Number(missionId)].assigned_to,
-        status: `${sectionDatas[Number(missionId)].status}`,
-        priority: `${sectionDatas[Number(missionId)].priority}`,
-        due_date: `${sectionDatas[Number(missionId)].due_date}`,
-        tags: sectionDatas[Number(missionId)].tags,
-      };
-
-      setSectionData((prev) => [...prev, newMission]);
+    const targetStatusId = event.currentTarget.getAttribute("data-status-id");
+    if (missionId) {
+      updateMission(missionId, targetStatusId);
     }
   };
 
@@ -45,21 +47,23 @@ const Section = ({ sectionData }: SectionProp) => {
     event.preventDefault();
   };
 
-  useEffect(() => {
-    setSectionData(data);
-  }, [data]);
-
   return (
     <div
-      className="bg-element-bg/60 rounded-xl flex max-h-[900px] overflow-y-auto overflow-x-hidden flex-col h-screen w-[400px]"
+      data-status-id={sectionData.id}
+      className="bg-element-bg/60 rounded-xl flex flex-col max-h-[900px] h-screen w-[400px] overflow-auto"
       onDragOver={handleDragOver}
       onDrop={handleDrop}
     >
       <Header data={sectionData} />
       <div className="flex flex-col px-4 py-4 gap-3 rounded-xl">
-        {sectionDatas?.map((m: MissionsTypesI, index: number) => (
-          <div key={index}>
-            <MissionCard data={m} index={index} />
+        {data?.map((m: MissionsTypesI) => (
+          <div
+            key={m.id}
+            id={m.id}
+            draggable
+            onDragStart={(e) => e.dataTransfer.setData("missionId", m.id)}
+          >
+            <MissionCard data={m} />
           </div>
         ))}
       </div>
