@@ -69,7 +69,7 @@
       "assigned_to": [
         "user_002"
       ],
-      "status": "list_001",
+      "status": "list_002",
       "priority": "High",
       "due_date": "2023-09-15",
       "tags": [
@@ -223,7 +223,7 @@
       "assigned_to": [
         "user_002"
       ],
-      "status": "list_001",
+      "status": "list_002",
       "priority": "Medium",
       "due_date": "2023-10-20",
       "tags": [

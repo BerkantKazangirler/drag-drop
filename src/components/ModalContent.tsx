@@ -1,26 +1,34 @@
 import { TfiClose } from "react-icons/tfi";
 import { MissionsTypesI } from "../types";
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
+import { ThemeContext } from "./MissionCard";
 
 interface ModalProps {
-  onClose: any;
   data: MissionsTypesI;
 }
 
-export default function ModalContent({ onClose, data }: ModalProps) {
+export default function ModalContent({ data }: ModalProps) {
   const modalRef = useRef();
   const wrapperRef = useRef();
 
+  const context = useContext(ThemeContext);
+
+  if (!context) {
+    throw new Error("ModalContent must be used within a ThemeContext.Provider");
+  }
+
+  const { setIsDialogOpen } = context;
+
   useEffect(() => {
     const escapeListener = document.addEventListener("keyup", (e) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") setIsDialogOpen(false);
     });
 
     const outsideClickListener = wrapperRef.current.addEventListener(
       "click",
       (e: any) => {
         const clickInside = e.composedPath().includes(modalRef.current);
-        if (!clickInside) onClose();
+        if (!clickInside) setIsDialogOpen(false);
       }
     );
 
@@ -41,7 +49,7 @@ export default function ModalContent({ onClose, data }: ModalProps) {
       >
         <div className="flex flex-row justify-between gap-6">
           <span className="text-lg font-semibold">{data.title}</span>
-          <button className="right-2" onClick={onClose} type="button">
+          <button className="right-2" onClick={() => setIsDialogOpen(false)}>
             <TfiClose />
           </button>
         </div>
