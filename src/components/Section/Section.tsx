@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchTodo } from "../../services/fetchDatas";
 import { Header } from "./Header";
 import { MissionCard } from "../MissionCard";
+import { useTodoContext } from "../../context/TodoContext";
 
 interface SectionProp {
   sectionData: HeaderTypesI;
@@ -10,6 +11,8 @@ interface SectionProp {
 }
 
 const Section = ({ sectionData, allRefetch }: SectionProp) => {
+  const { updateMission } = useTodoContext();
+
   const { data } = useQuery({
     queryKey: ["todo", sectionData.id],
     queryFn: () =>
@@ -18,27 +21,13 @@ const Section = ({ sectionData, allRefetch }: SectionProp) => {
       }),
   });
 
-  const updateMission = (missionId: string, targetStatusId: string) => {
-    if (targetStatusId !== null) {
-      fetch("http://localhost:3000/todos/" + missionId, {
-        method: "PATCH",
-        body: JSON.stringify({
-          status: targetStatusId,
-        }),
-      })
-        .then((res) => res.json())
-        .then(() => {
-          allRefetch();
-        });
-    }
-  };
-
   const handleDrop = (event: any) => {
     event.preventDefault();
     const missionId = event.dataTransfer.getData("missionId");
 
     const targetStatusId = event.currentTarget.getAttribute("data-status-id");
     if (missionId) {
+      allRefetch();
       updateMission(missionId, targetStatusId);
     }
   };

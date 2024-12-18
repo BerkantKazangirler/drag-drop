@@ -1,19 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
-import { fetchSections } from "../../services/fetchDatas";
-import { HeaderTypesI } from "../../types";
 import Section from "./Section";
 import { Loading } from "./Loading";
+import { useContainerContext } from "../../context/ContainerContext";
 
 const SectionContainer = () => {
-  const {
-    data: SectionData,
-    isLoading,
-    isFetching,
-    refetch: allRefetch,
-  } = useQuery<HeaderTypesI[]>({
-    queryKey: ["sections"],
-    queryFn: () => fetchSections().then((res) => res),
-  });
+  const { isLoading, isFetching, SectionData, allRefetch } =
+    useContainerContext();
 
   if (isLoading || isFetching) {
     return (
