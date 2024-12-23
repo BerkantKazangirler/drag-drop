@@ -59,7 +59,10 @@ export const Header = ({ data, count }: HeaderProp) => {
         <GoPlus
           onClick={(e) => test(e.currentTarget.id)}
           id={style.title}
-          className={classNames("text-xl self-center rounded", style.icon)}
+          className={classNames(
+            "text-xl self-center rounded hover:cursor-pointer",
+            style.icon
+          )}
         />
       </div>
       <span

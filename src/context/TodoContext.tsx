@@ -117,7 +117,7 @@ const TodoProvider = ({ children }: any) => {
                 <option value="Training">Training</option>
                 <option value="Documentation">Documentation</option>
                 <option value="Release">Release</option>
-                <option value="AppStore">App Store</option>
+                <option value="App Store">App Store</option>
                 <option value="Infrastructure">Infrastructure</option>
                 <option value="Integration">Integration</option>
                 <option value="Social Media">Social Media</option>
@@ -125,7 +125,7 @@ const TodoProvider = ({ children }: any) => {
                 <option value="Database">Database</option>
                 <option value="Form">Form</option>
                 <option value="Reporting">Reporting</option>
-                <option value="DataAnalysis">Data Analysis</option>
+                <option value="Data Analysis">Data Analysis</option>
                 <option value="Security">Security</option>
                 <option value="QA">QA</option>
                 <option value="Localization">Localization</option>
@@ -148,7 +148,7 @@ const TodoProvider = ({ children }: any) => {
                 <option value="Training">Training</option>
                 <option value="Documentation">Documentation</option>
                 <option value="Release">Release</option>
-                <option value="AppStore">App Store</option>
+                <option value="App Store">App Store</option>
                 <option value="Infrastructure">Infrastructure</option>
                 <option value="Integration">Integration</option>
                 <option value="Social Media">Social Media</option>
@@ -156,7 +156,7 @@ const TodoProvider = ({ children }: any) => {
                 <option value="Database">Database</option>
                 <option value="Form">Form</option>
                 <option value="Reporting">Reporting</option>
-                <option value="DataAnalysis">Data Analysis</option>
+                <option value="Data Analysis">Data Analysis</option>
                 <option value="Security">Security</option>
                 <option value="QA">QA</option>
                 <option value="Localization">Localization</option>

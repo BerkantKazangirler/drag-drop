@@ -8,15 +8,15 @@ interface ModalProps {
 }
 
 export default function ModalContent({ onClose, data }: ModalProps) {
-  const modalRef = useRef();
-  const wrapperRef = useRef();
+  const modalRef = useRef<HTMLDivElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const escapeListener = document.addEventListener("keyup", (e) => {
       if (e.key === "Escape") onClose();
     });
 
-    const outsideClickListener = wrapperRef.current.addEventListener(
+    const outsideClickListener = wrapperRef.current?.addEventListener(
       "click",
       (e: any) => {
         const clickInside = e.composedPath().includes(modalRef.current);
