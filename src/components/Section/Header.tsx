@@ -5,9 +5,10 @@ import classNames from "classnames";
 
 interface HeaderProp {
   data: HeaderTypesI;
+  count: any;
 }
 
-export const Header = ({ data }: HeaderProp) => {
+export const Header = ({ data, count }: HeaderProp) => {
   const styles = {
     list_001: {
       border: "text-todo-blue",
@@ -40,7 +41,7 @@ export const Header = ({ data }: HeaderProp) => {
           />
           <span className="text-lg">{data.name}</span>
           <span className="text-black/50 bg-gray-300 rounded-full self-center px-2">
-            {data.tasks.length}
+            {count}
           </span>
         </div>
         <GoPlus

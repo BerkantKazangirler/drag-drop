@@ -69,7 +69,7 @@
       "assigned_to": [
         "user_002"
       ],
-      "status": "list_002",
+      "status": "list_004",
       "priority": "High",
       "due_date": "2023-09-15",
       "tags": [
@@ -86,7 +86,7 @@
       "assigned_to": [
         "user_003"
       ],
-      "status": "list_002",
+      "status": "list_004",
       "priority": "Medium",
       "due_date": "2023-10-01",
       "tags": [
@@ -121,7 +121,7 @@
       "assigned_to": [
         "user_003"
       ],
-      "status": "list_002",
+      "status": "list_001",
       "priority": "High",
       "due_date": "2023-09-30",
       "tags": [
@@ -138,7 +138,7 @@
       "assigned_to": [
         "user_004"
       ],
-      "status": "list_003",
+      "status": "list_001",
       "priority": "Medium",
       "due_date": "2023-10-05",
       "tags": [
@@ -155,7 +155,7 @@
       "assigned_to": [
         "user_003"
       ],
-      "status": "list_003",
+      "status": "list_002",
       "priority": "High",
       "due_date": "2023-09-20",
       "tags": [
@@ -206,7 +206,7 @@
       "assigned_to": [
         "user_004"
       ],
-      "status": "list_003",
+      "status": "list_002",
       "priority": "Low",
       "due_date": "2023-10-15",
       "tags": [
@@ -257,7 +257,7 @@
       "assigned_to": [
         "user_003"
       ],
-      "status": "list_001",
+      "status": "list_004",
       "priority": "High",
       "due_date": "2023-11-15",
       "tags": [
@@ -274,7 +274,7 @@
       "assigned_to": [
         "user_002"
       ],
-      "status": "list_004",
+      "status": "list_003",
       "priority": "High",
       "due_date": "2023-09-30",
       "tags": [
@@ -308,7 +308,7 @@
       "assigned_to": [
         "user_002"
       ],
-      "status": "list_003",
+      "status": "list_004",
       "priority": "High",
       "due_date": "2023-10-05",
       "tags": [
@@ -394,7 +394,7 @@
       "assigned_to": [
         "user_004"
       ],
-      "status": "list_001",
+      "status": "list_004",
       "priority": "Low",
       "due_date": "2023-09-27",
       "tags": [

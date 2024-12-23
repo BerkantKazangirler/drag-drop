@@ -1,4 +1,5 @@
 import { createContext, useContext } from "react";
+import { useContainerContext } from "./ContainerContext";
 
 type TodoContextType = {
   updateMission: (missionId: string, targetStatusId: string) => void;
@@ -11,6 +12,8 @@ const TodoContext = createContext<TodoContextType>({
 export const useTodoContext = () => useContext(TodoContext);
 
 const TodoProvider = ({ children }: any) => {
+  const { refetchTodos } = useContainerContext();
+
   const updateMission = (missionId: string, targetStatusId: string) => {
     if (targetStatusId !== null) {
       fetch("http://localhost:3000/todos/" + missionId, {
@@ -18,7 +21,9 @@ const TodoProvider = ({ children }: any) => {
         body: JSON.stringify({
           status: targetStatusId,
         }),
-      }).then((res) => res.json());
+      })
+        .then((res) => res.json())
+        .finally(() => refetchTodos());
     }
   };
 

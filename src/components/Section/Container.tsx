@@ -25,7 +25,7 @@ const SectionContainer = () => {
     <div className="flex gap-4 items-start">
       {SectionData?.map((m, index) => (
         <div key={m.id || index} id={m.id}>
-          <Section sectionData={m} allRefetch={allRefetch} />
+          <Section status={m.id} sectionData={m} allRefetch={allRefetch} />
         </div>
       ))}
     </div>
