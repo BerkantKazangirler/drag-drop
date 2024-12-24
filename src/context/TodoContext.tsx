@@ -57,6 +57,7 @@ const TodoProvider = ({ children }: any) => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
+            id: crypto.randomUUID(),
             project_id: proje?.value,
             title: title,
             description: desc,
